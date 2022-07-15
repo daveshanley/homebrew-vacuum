@@ -1,7 +1,7 @@
 class Vacuum < Formula
     desc "vacuum"
     homepage "https://quobix.com/vacuum"
-    version "0.0.10"
+    version "0.0.11"
   
     if OS.mac?
       url "https://github.com/daveshanley/vacuum/releases/download/v0.0.11/vacuum_0.0.11_Darwin_x86_64.tar.gz"

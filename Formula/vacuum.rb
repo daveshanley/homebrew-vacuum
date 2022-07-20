@@ -4,23 +4,23 @@ class Vacuum < Formula
     version "0.0.12"
   
     if OS.mac?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.12/vacuum_0.0.12_Darwin_x86_64.tar.gz"
-      sha256 "2fda9ed0b8e82e06f34d4c6f4eef47571b004f9eb739af90c8ac3703e4f5e201"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.15/vacuum_0.0.15_darwin_x86_64.tar.gz"
+      sha256 "bad2e34e2153a9baff4273c7372a1aa0b5a0923a9480f01e31e6f31993e3fc52"
     end
   
     if OS.mac? && Hardware::CPU.arm?
-        url "https://github.com/daveshanley/vacuum/releases/download/v0.0.12/vacuum_0.0.12_Darwin_arm64.tar.gz"
-        sha256 "6fe9b8d4fcd3c1ef878ea236df8b64906aaeba71091f03a34cf6e8e9512d46e2"
+       url "https://github.com/daveshanley/vacuum/releases/download/v0.0.15/vacuum_0.0.15_darwin_arm64.tar.gz"
+       sha256 "9a771f4fba436a1bc4b6ddbcafc48947dc094cdf8cd483bcfc8e66adf98acb6f"
     end
   
     if OS.linux? && Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.12/vacuum_0.0.12_Linux_x86_64.tar.gz"
-      sha256 "e8f9d00360fe29abcf80fd2386d1a49218e6cd11ca53317fb79b4a6028077663"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.15/vacuum_0.0.15_linux_x86_64.tar.gz"
+      sha256 "f013c12928b739db74dd1571f6727d406f4446796eda805d49965110f6d99506"
     end
   
     if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.12/vacuum_0.0.12_Linux_arm64.tar.gz"
-      sha256 "54c08ae11e0371f859af3afab035e3ea15155038cf771e9294f79394a2800957"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.15/vacuum_0.0.15_linux_arm64.tar.gz"
+      sha256 "bd88f36254afd085613c0ef0d45572cbabd1820a441a98596987511b3ebfc0f8"
     end
   
     def install

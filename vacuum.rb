@@ -5,20 +5,20 @@
 class Vacuum < Formula
   desc "The worlds fastest and most scalable OpenAPI linter"
   homepage "https://quobix.com/vacuum"
-  version "0.0.21"
+  version "0.0.22"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.21/vacuum_0.0.21_darwin_x86_64.tar.gz"
-      sha256 "b98a827d2d1489c9e4811b15275f59b511c1d00e9f24c97ef878c70eb0612422"
+    if Hardware::CPU.arm?
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.22/vacuum_0.0.22_darwin_arm64.tar.gz"
+      sha256 "9c00fc050393fcf48fd42913a2767b707f4d3decbd1ea2b194514222fff1cb2f"
 
       def install
         bin.install "vacuum"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.21/vacuum_0.0.21_darwin_arm64.tar.gz"
-      sha256 "077845ec6f63f6adcfdce4e17a590457f3c755e4fedabb83e0a3bf781d8b5487"
+    if Hardware::CPU.intel?
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.22/vacuum_0.0.22_darwin_x86_64.tar.gz"
+      sha256 "536e28adfc30c7e41c1b4015d805b3a6eddef563934f6091d96288dae6caf513"
 
       def install
         bin.install "vacuum"
@@ -27,17 +27,17 @@ class Vacuum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.21/vacuum_0.0.21_linux_x86_64.tar.gz"
-      sha256 "acef96ba253e5dc9d77faad4a19469c3f1bd3f6678a28dac39e7a8cecd27ac69"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.22/vacuum_0.0.22_linux_arm64.tar.gz"
+      sha256 "4baeb127e87c00ed0ff99d63844618fd1d99562c530b48a60a038acb84c9c23b"
 
       def install
         bin.install "vacuum"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.21/vacuum_0.0.21_linux_arm64.tar.gz"
-      sha256 "5c5ffc480b5e198ae096573f79a74d6872d876291dfd4fdf374f362d113fd75f"
+    if Hardware::CPU.intel?
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.22/vacuum_0.0.22_linux_x86_64.tar.gz"
+      sha256 "19335e780f10cf2a745750ac4c9193ede570e216f7fecf598529dc1890774b27"
 
       def install
         bin.install "vacuum"

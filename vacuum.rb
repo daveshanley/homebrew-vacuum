@@ -5,20 +5,20 @@
 class Vacuum < Formula
   desc "The worlds fastest and most scalable OpenAPI linter"
   homepage "https://quobix.com/vacuum"
-  version "0.0.51"
+  version "0.0.52"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.51/vacuum_0.0.51_darwin_arm64.tar.gz"
-      sha256 "60ca1592f8f2a10d3e3feb6d8c3164f6060b44d8c560f36133bfcff43a28c7e8"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.52/vacuum_0.0.52_darwin_arm64.tar.gz"
+      sha256 "abfaa7761da82a6c2bdb7e0d22f22dfeccd17a96bb799c35325f4003811fa923"
 
       def install
         bin.install "vacuum"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.51/vacuum_0.0.51_darwin_x86_64.tar.gz"
-      sha256 "c6332cec18a3902dbf55201f69de101e2c3f34351cc5617bba1db0a4082a13be"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.52/vacuum_0.0.52_darwin_x86_64.tar.gz"
+      sha256 "5fc6c5c15fb5744237770ae14f92c09614c2e43e64fb55295898493f35732c1e"
 
       def install
         bin.install "vacuum"
@@ -28,16 +28,16 @@ class Vacuum < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.51/vacuum_0.0.51_linux_x86_64.tar.gz"
-      sha256 "0514d2000485d86387beb042f1b54646d3ee6588f4da043aee98607cd0df0138"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.52/vacuum_0.0.52_linux_x86_64.tar.gz"
+      sha256 "31033a7027cc6232dd4b39bc790b9f95e1996f2fbe7aeb6f4afdff98f0a885f6"
 
       def install
         bin.install "vacuum"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.51/vacuum_0.0.51_linux_arm64.tar.gz"
-      sha256 "c2791e84476d6c2ae614fae94b3424cf9ee4b96a136a55cb953fe6c764bf3eb3"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.0.52/vacuum_0.0.52_linux_arm64.tar.gz"
+      sha256 "96569d127b535330880f27d19c82596667b5524287d97e4aa4762357293b1fc7"
 
       def install
         bin.install "vacuum"

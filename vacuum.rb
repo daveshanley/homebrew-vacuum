@@ -5,20 +5,20 @@
 class Vacuum < Formula
   desc "The worlds fastest and most scalable OpenAPI linter"
   homepage "https://quobix.com/vacuum"
-  version "0.2.4"
+  version "0.2.5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.4/vacuum_0.2.4_darwin_x86_64.tar.gz"
-      sha256 "539694768133e483db65803a1b9b1b98b3820362886d6a193e866d8d8c1e12bf"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.5/vacuum_0.2.5_darwin_x86_64.tar.gz"
+      sha256 "ff90e907b91a963bfbf904e8e6ddf3c384ec499a2aeb583e90c85a18af4fb90f"
 
       def install
         bin.install "vacuum"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.4/vacuum_0.2.4_darwin_arm64.tar.gz"
-      sha256 "2a17048554838e69cd5cf3ade12c07625e1deaa767d9cd4595c236c2052f9fe6"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.5/vacuum_0.2.5_darwin_arm64.tar.gz"
+      sha256 "11055a3f84dae2253d0febfd4f3ba17a8f7ba1acbb220b1f9b8c3f6aa69c0f75"
 
       def install
         bin.install "vacuum"
@@ -28,16 +28,16 @@ class Vacuum < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.4/vacuum_0.2.4_linux_arm64.tar.gz"
-      sha256 "e8fd288ce7f3e2e6a958b0b9db9ae3c31503f44671b2c6f01449aeef7f7689c3"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.5/vacuum_0.2.5_linux_arm64.tar.gz"
+      sha256 "ecce8ea13709aa962a8344983fea453dbaf00bd81d08f2e3683313fc10df12fc"
 
       def install
         bin.install "vacuum"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.4/vacuum_0.2.4_linux_x86_64.tar.gz"
-      sha256 "2b19b44d8950f711117d2314dd872a31770381a12b8755b10acb6c1531396f39"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.2.5/vacuum_0.2.5_linux_x86_64.tar.gz"
+      sha256 "176ce74e65cc48fcb089200509fed598b0b8fa58bd7a4210636c06fc6ea435bc"
 
       def install
         bin.install "vacuum"

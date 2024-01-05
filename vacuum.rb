@@ -5,20 +5,20 @@
 class Vacuum < Formula
   desc "The worlds fastest and most scalable OpenAPI linter"
   homepage "https://quobix.com/vacuum"
-  version "0.6.3"
+  version "0.7.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.6.3/vacuum_0.6.3_darwin_arm64.tar.gz"
-      sha256 "5484c70f53355bd215f2d9a4c9226eaa2dbc7e0a4486ad8b190f0c0dd3c5d409"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.7.0/vacuum_0.7.0_darwin_arm64.tar.gz"
+      sha256 "095ea7eb2f495113ff1f975214c43f21e2a5ba115db664702bc06b1e307db049"
 
       def install
         bin.install "vacuum"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.6.3/vacuum_0.6.3_darwin_x86_64.tar.gz"
-      sha256 "622a62491c1d96c5050bd1499db9f8ab649f479050eb2da6d9daa40a2bed8f1a"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.7.0/vacuum_0.7.0_darwin_x86_64.tar.gz"
+      sha256 "04f7fc971f79c0e90588795d0b2f41f05fd713918d349e4d75a0b7ec84750af0"
 
       def install
         bin.install "vacuum"
@@ -27,17 +27,17 @@ class Vacuum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.6.3/vacuum_0.6.3_linux_x86_64.tar.gz"
-      sha256 "831c0366aff53b843fd80ee5c5c0fa0b17b8e14a451beb845fb1fc1e98f615e5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.7.0/vacuum_0.7.0_linux_arm64.tar.gz"
+      sha256 "5058d0187f6238764c41fb3fb9b47ab05417efdc7b461eaf8bc67f6fb42c4734"
 
       def install
         bin.install "vacuum"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.6.3/vacuum_0.6.3_linux_arm64.tar.gz"
-      sha256 "f8687c94470ee4d69982dcbeb5c315cf6b889b8057c44f3fddd2f1ad54b1f163"
+    if Hardware::CPU.intel?
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.7.0/vacuum_0.7.0_linux_x86_64.tar.gz"
+      sha256 "843fc52003fd21bd3b7f2fe6c191b65e6f2fc3a7a2f73dfab383718eff2ae316"
 
       def install
         bin.install "vacuum"

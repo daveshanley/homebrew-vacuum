@@ -5,20 +5,20 @@
 class Vacuum < Formula
   desc "The worlds fastest and most scalable OpenAPI linter"
   homepage "https://quobix.com/vacuum"
-  version "0.21.2"
+  version "0.21.3"
 
   on_macos do
     on_intel do
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.21.2/vacuum_0.21.2_darwin_x86_64.tar.gz"
-      sha256 "9aad9e5cf56d039c48a77d4a169fe0c690241bc74b30fa2de0d14ce4880bd079"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.21.3/vacuum_0.21.3_darwin_x86_64.tar.gz"
+      sha256 "2ef1b61561e8b5bf961349f98f35686d07836b250b6165d223d1716e00f4a696"
 
       def install
         bin.install "vacuum"
       end
     end
     on_arm do
-      url "https://github.com/daveshanley/vacuum/releases/download/v0.21.2/vacuum_0.21.2_darwin_arm64.tar.gz"
-      sha256 "946f6d8b5c3c01875f1172f1ce00e3f1dc24cfca37f78014b4561538d5238236"
+      url "https://github.com/daveshanley/vacuum/releases/download/v0.21.3/vacuum_0.21.3_darwin_arm64.tar.gz"
+      sha256 "a3092ec0ec16dbd8977d6b9964c1cb68a8179060f65485e436298ae06d7e3a42"
 
       def install
         bin.install "vacuum"
@@ -29,8 +29,8 @@ class Vacuum < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/daveshanley/vacuum/releases/download/v0.21.2/vacuum_0.21.2_linux_x86_64.tar.gz"
-        sha256 "0e6f916d5e4c77ea731dba1ea919ce05ae9042bf73a5d41e8cdfcdeacdb1f177"
+        url "https://github.com/daveshanley/vacuum/releases/download/v0.21.3/vacuum_0.21.3_linux_x86_64.tar.gz"
+        sha256 "263ba056e132eadc043a8b6e2670a4509c0acbb4c3a91d7640bbacb85d112aa9"
 
         def install
           bin.install "vacuum"
@@ -39,8 +39,8 @@ class Vacuum < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/daveshanley/vacuum/releases/download/v0.21.2/vacuum_0.21.2_linux_arm64.tar.gz"
-        sha256 "161e3a41f9d6d4d387fb77145ead71d940c3e4de6a951f90c75fe8832fdfa077"
+        url "https://github.com/daveshanley/vacuum/releases/download/v0.21.3/vacuum_0.21.3_linux_arm64.tar.gz"
+        sha256 "4d9fdca9c14efcadebdc027cb439f8571ffa0b3f8771a69e75f7df0219e509f9"
 
         def install
           bin.install "vacuum"
